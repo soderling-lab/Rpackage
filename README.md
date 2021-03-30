@@ -56,7 +56,8 @@ Broman's](https://kbroman.org/pkg_primer/pages/docs.html) tutorial for more.
 Include `import` statements to insure that any required dependencies are
 documented in the `NAMESPACE` file.  After creating a function, simply use
 `document` to generate its documentation--this will be put in the `man/`
-directory and saved as an `.Rd` file.
+directory and saved as an `.Rd` file. See [hello.R](./R/hello.R) as an
+example.
 
 
 ## Sharing your package
@@ -101,13 +102,14 @@ data("hi", package="Rpackage")
 help("hi", package="Rpackage")
 
 ```
+
 Save R objects with the `save` command. It's best practice to save the object
 using the same filename (e.g. `hi` saved as `hi.rda`). You must explicitly
 provide `file` and `version` arguments to `save`. Use `version=2` to avoid
 warnings about the data version when installing the package. Put saved `rda`
 files in the `data/` directory.  Document the data by generating a Roxygen2
 formatted file in the `R/` directory.  Note that the `@name` field is required
-an the data's documentation should end with `NULL`.  Finally, be sure to call
+an the data's documentation should end with `NULL`.  See [data.R](./R/data.R) as a minimal example. Finally, be sure to call
 `devtools::document` to generate the documentation!
 
 You can also include raw data in `inst/extdata`, these files are not loaded when
