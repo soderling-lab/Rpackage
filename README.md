@@ -3,20 +3,20 @@
 Creating an R package is simple with `devtools` and `git`.
 
 There are three essential `devtools` commands that you will need to create an R package.
-* `devtools::create("packageName")` - use `create` to create a empty R package.
-* `devtools::document()` - use `document` to generate documentation for R
+* `create` - use `create("PackageName")` to create a empty R package.
+* `document` - use `document()` to generate documentation for R
     functions and data (see below).
-* `devtools::install_github("user/packageName")` - use `install_github` to install
-    a github user's package.
+* `install_github` - use `install_github("username/package")` to install
+    a github user's package (e.g. `install_github("soderling-lab/Rpackage")`).
 
 Finally, you will probably also need to use `devtools::load_all()` to load your
 package as it is locally. You will then have access to its functions, data, and
-documentation. 
+documentation as you normally would.
 
 
 ## Creating a new package
 
-Start by creating a new directory for your package, in the terminal type:
+Start by creating a new directory for your package.
 ```bash
 
 mkdir Rpackage
@@ -36,14 +36,16 @@ You will find a couple of new files in your new directory:
 cd Rpackage
 ls -1
 
-# DESCRIPTION
-# NAMESPACE
-# R
+# DESCRIPTION - basic information about your package
+# NAMESPACE - your packages dependencies (don't worry, this is managed for you!)
+# R - directory for functions
 
 ```
 
-You can edit the `DESCRIPTION` file with information about your package. You should also create a README and add a license.
-See github for more about adding a license: https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/licensing-a-repository
+You can edit the `DESCRIPTION` file with information about your package. You
+should also create a README and add a license.
+See github for more about adding a license: 
+https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/licensing-a-repository
 
 
 ## Creating and documenting functions
