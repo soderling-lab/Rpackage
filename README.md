@@ -2,16 +2,16 @@
 
 Creating an R package is simple with `devtools` and `git`.
 
-There are three essential `devtools` commands that you will need to use to
-create an R package.
-* devtools::create("packageName") - use `create` to create a empty R package.
-* devtools::document() - use `document` to generate documentation for R
+There are three essential `devtools` commands that you will need to create an R package.
+* `devtools::create("packageName")` - use `create` to create a empty R package.
+* `devtools::document()` - use `document` to generate documentation for R
     functions and data (see below).
-* devtools::install_github("user/packageName") - use `install_github` to install
+* `devtools::install_github("user/packageName")` - use `install_github` to install
     a github user's package.
 
-You can use `devtools::load_all()` to load your package as it is locally. You
-will then have access to its functions, data, and documentation.
+Finally, you will probably also need to use `devtools::load_all()` to load your
+package as it is locally. You will then have access to its functions, data, and
+documentation. 
 
 
 ## Creating a new package
