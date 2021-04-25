@@ -124,3 +124,17 @@ with `data("hi", package="Rpackage")`.
 
 See https://r-pkgs.org/data.html#documenting-data for more about documenting
 data.
+
+## Tests
+
+To generate the required infastructure, from within your package directory, run
+`usethis::use_test("name")`. This will:
+```
+# edit DESCRIPTION
+mkdir tests
+touch tests/teststhat.R # don't need to edit this file
+mkdir tests/testthat # put tests here!
+```
+This will create a file `tests/testthat/test-name.R` where you can put tests.
+
+You can run these tests with `devtools::test()`.
